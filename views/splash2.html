@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Project Campus Parlement</title>
+    <link rel="icon" type="image/webp" href="https://imgur.com/RDgv0fL.png" />
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta property="og:title" content="Het Campus Parelement" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://app.karavaan.qp/" />
+    <meta property="og:image" content="https://imgur.com/RDgv0fL.png" />
+    <meta property="og:description"
+        content="Wij zijn een groep jongeren dat ietsje meer wilt doen dan draaien met onze vingers." />
+    <meta property="og:site_name" content="" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" media="all" href="/css/global.css" />
+    <link rel="stylesheet" media="all" href="/css/login.css" />
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+        var SocketConfig = {
+            apiKey: "AIzaSyBmOAtEwEjsrDjLsBPvj9xWhupp8P4zueI",
+            authDomain: "projectkaravaan.firebaseapp.com",
+            projectId: "projectkaravaan",
+            storageBucket: "projectkaravaan.appspot.com",
+            messagingSenderId: "11255169963",
+            appId: "1:11255169963:web:dd6bd5876ac27da6f708ee",
+            measurementId: "G-T4JG0XLY06"
+        };
+        firebase.initializeApp(SocketConfig);
+    </script>
+</head>
+
+<body>
+    <nav class="navbar is-transparent is-fixed-top is-spaced">
+        <div class="navbar-brand">
+            <div class="navbar-item">
+                <p class="title is-5 animate__animated animate__fadeInDown" id="company">Het Jongeren <span
+                        class="blue">Parlement</span></p>
+            </div>
+        </div>
+    </nav>
+    <div class="waveWrapper waveAnimation">
+        <div class="waveWrapperInner bgTop">
+            <div class="wave waveTop" style="background-image: url('img/wave-top.png')"></div>
+        </div>
+        <div class="waveWrapperInner bgMiddle">
+            <div class="wave waveMiddle" style="background-image: url('img/wave-mid.png')"></div>
+        </div>
+        <div class="waveWrapperInner bgBottom">
+            <div class="wave waveBottom" style="background-image: url('img/wave-bot.png')"></div>
+        </div>
+    </div>
+    <section class="hero is-medium animate__animated animate__fadeInRight" id="page">
+
+        <div class="hero-body">
+            <div class="columns">
+                <div class="column is-6 is-offset-1">
+                    <h1 class="title is-1 animate__animated" id="title">Jouw vraag, onze taak</h1>
+                    <h1 class="subtitle is-6 animate__animated" id="subtitle">Wil je de tofste en misschien de leukste
+                        plaat ooit horen op evenementen van het jongeren parlement?</h1>
+                    <div class="column is-offset-0 is-7 has-text-centered animate__animated animate__fadeInUp"
+                        id="columns">
+                        <div class="field animate__animated animate__fadeInUp">
+                            <input id="user" class="input" type="text" placeholder="Gebruiker">
+                        </div>
+                        <div class="field animate__animated animate__fadeInUp">
+                            <input id="password" class="input" type="password" placeholder="Password">
+                        </div>
+
+                        <a id="logSession" class="button button-special is-rounded animate__animated animate__fadeInUp">
+                            <span class="icon has-text-discord"><i class="fad fa-sign-in-alt"></i></span>
+                            <span>Log in</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-4 is-offset-1 animate__animated" id="profile">
+                    <h1 class="title is-5 animate__animated animate__fadeInUp" id="title">Ontdek wat jij mischien leuk
+                        zou vinden</h1>
+                    <h1 class="subtitle is-7 animate__animated animate__fadeInUp" id="subtitle">Wat andere mensen leuk
+                        vinden</h1>
+                </div>
+            </div>
+            <div class="columns is-multiline">
+                <div class="column is-2 is-offset-1 animate__animated has-text-centered" id="profile">
+                    <figure class="image is-inline-block is-48x58 animate__animated animate__fadeInUp"><img
+                            class="is-radius" src="https://i.imgur.com/8cGQHNf.png" id="img"></figure><br><br>
+                    <h1 class="title is-5 animate__animated animate__fadeInUp" id="title">You</h1>
+                    <h1 class="subtitle is-7 animate__animated animate__fadeInUp" id="subtitle">Regard, Troye Sivan,
+                        Tate McRae</h1>
+                    <a id="logSession" class="button button-special is-rounded animate__animated animate__fadeInUp">
+                        <span class="icon has-text-discord"><i class="fad fa-heart"></i></span>
+                        <span>Meer dan 50 likes</span>
+                    </a>
+                </div>
+                <div class="column is-2 is-offset-1 animate__animated has-text-centered" id="profile">
+                    <figure class="image is-inline-block is-48x58 animate__animated animate__fadeInUp"><img
+                            class="is-radius" src="https://i.imgur.com/8cGQHNf.png" id="img"></figure><br><br>
+                    <h1 class="title is-5 animate__animated animate__fadeInUp" id="title">You</h1>
+                    <h1 class="subtitle is-7 animate__animated animate__fadeInUp" id="subtitle">Regard, Troye Sivan,
+                        Tate McRae</h1>
+                </div>
+            </div>
+    </section>
+
+    <div class="loading-overlay " id="loader">
+        <div class="loading-background"></div>
+        <div class="loading-icon"></div>
+    </div>
+</body>
+
+<script src="/js/modules/themes.js"></script>
+<script src="/js/modules/font.js"></script>

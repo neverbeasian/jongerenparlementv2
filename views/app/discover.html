@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+
+<head>
+    <title>Karavaan >> Ontdek</title>
+    <link rel="icon" type="image/webp" href="https://imgur.com/RDgv0fL.png" />
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta property="og:title" content="Project Karavaan" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://app.karavaan.qp/" />
+    <meta property="og:image" content="https://imgur.com/RDgv0fL.png" />
+    <meta property="og:description" content="Een project dat het even ietsje anders aanpakt" />
+    <meta property="og:site_name" content="Teddy Tinaruck" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" media="all" href="/css/global.css" />
+    <link rel="stylesheet" media="all" href="/css/login.css" />
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+        var SocketConfig = {
+            apiKey: "AIzaSyBmOAtEwEjsrDjLsBPvj9xWhupp8P4zueI",
+            authDomain: "projectkaravaan.firebaseapp.com",
+            projectId: "projectkaravaan",
+            storageBucket: "projectkaravaan.appspot.com",
+            messagingSenderId: "11255169963",
+            appId: "1:11255169963:web:dd6bd5876ac27da6f708ee",
+            measurementId: "G-T4JG0XLY06"
+        };
+        firebase.initializeApp(SocketConfig);
+    </script>
+</head>
+
+<body>
+    <nav class="navbar is-transparent is-fixed-top is-spaced">
+        <div class="navbar-brand">
+            <div class="navbar-item">
+                <p class="title is-5 animate__animated" id="company">Project Karavaan</p>
+            </div>
+
+            <div class="navbar-item"></div>
+            <div class="navbar-item"></div>
+            <div class="navbar-item"></div>
+            <div class="navbar-item"></div>
+            <div class="navbar-item"></div>
+            <div class="navbar-item"></div>
+            <div class="navbar-item"></div>
+            <div class="navbar-item"></div>
+            <div class="navbar-item"></div>
+
+            <div class="navbar-item">
+                <p class="title is-5 has-text-grey animate__animated animate__fadeInRight" id="home">Home</p>
+            </div>
+            <div class="navbar-item"></div>
+            <div class="navbar-item">
+                <p class="title is-5 animate__animated animate__fadeInRight" id="discover">Ontdekken</p>
+            </div>
+            <div class="navbar-item"></div>
+            <div class="navbar-item">
+                <p class="title is-5 has-text-grey animate__animated animate__fadeInRight" id="library">Bibliotheek</p>
+            </div>
+            <div class="navbar-item"></div>
+            <div class="navbar-item">
+                <p class="title is-5 has-text-grey animate__animated animate__fadeInRight" id="settings">Instellingen</p>
+            </div>
+        </div>
+    </nav>
+    <section class="hero is-medium animate__animated" id="page">
+        <div class="hero-body"><br><br><br>
+            <div class="container animate__animated">
+                <div class="columns">
+                    <div class="column is-5 is-offset-1">
+                        <br>
+                        <h1 class="title is-1 animate__animated">Iedereen vind deze wel leuk</h1>
+                        <p class="subtitle is-8 has-text-danger animate__animated"></p>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-4 is-offset-1">
+                        <h1 class="title is-4 animate__animated" id="title-options">Wat kan jij al doen?</h1>
+                        <h1 class="subtitle is-7 animate__animated" id="subtitle-options">De muziek die jij kiest en ook alleen
+                            jij</h1>
+                    </div>
+                </div>
+                <div class="columns margin-center animate__animated animate__fadeInUp">
+                    <div class="column is-3 is-offset-1 animate__animated" id="request">
+                        <div class="box">
+                            <div class="card-content">
+                                <div class="media" style="border-top: none">
+                                    <div class="media-content" style="margin: 0rem 0">
+                                        <p class="title is-6">Muziek Aanvragen</p>
+                                        <p class="subtitle is-7">Heb je een favoriet deuntje? Zoek het op en vraag het
+                                            aan!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  <div class="column is-3 is-offset-0 animate__animated" id="feedback">
+                        <div class="box">
+                            <div class="card-content">
+                                <div class="media" style="border-top: none">
+                                    <div class="media-content" style="margin: 0rem 0">
+                                        <p class="title is-6">Feedback sturen</p>
+                                        <p class="subtitle is-7">Heb je een probleem of een bug gevonden? Meld het direct!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-4 is-offset-1">
+                        <h1 class="title is-5 animate__animated" id="title-playlist">Jouw playlist</h1>
+                        <h1 class="subtitle is-7 animate__animated" id="subtitle-playlist">De muziek die jij kiest en ook alleen
+                            jij</h1>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <div class="loading-overlay is-active" id="loader">
+        <div class="loading-background"></div>
+        <div class="loading-icon"></div>
+    </div>
+</body>
+<script src="/js/app/discover.js"></script>
+<script src="/js/auth/auth.js"></script>
+<script src="/js/modules/font.js"></script>

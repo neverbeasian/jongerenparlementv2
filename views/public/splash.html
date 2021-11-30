@@ -1,0 +1,153 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" media="all" href="/css/global.css" />
+    <link rel="stylesheet" media="all" href="/css/in.css" />
+
+    <title>Jongeren Parlement / Aanvragen</title>
+    <link rel="icon" type="image/webp" href="https://imgur.com/RDgv0fL.png" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar is-transparent is-fixed-top is-spaced">
+        <div class="navbar-brand">
+            <div class="navbar-item">
+                <p class="title is-5" id="company">Het Jongeren <span class="is-blue">Parlement</span></p>
+            </div>
+        </div>
+    </nav>
+
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">
+        ❅
+        </div>
+        <div class="snowflake">
+        ❆
+        </div>
+        <div class="snowflake">
+        ❅
+        </div>
+        <div class="snowflake">
+        ❆
+        </div>
+        <div class="snowflake">
+        ❅
+        </div>
+        <div class="snowflake">
+        ❆
+        </div>
+        <div class="snowflake">
+          ❅
+        </div>
+        <div class="snowflake">
+          ❆
+        </div>
+        <div class="snowflake">
+          ❅
+        </div>
+        <div class="snowflake">
+          ❆
+        </div>
+        <div class="snowflake">
+          ❅
+        </div>
+        <div class="snowflake">
+          ❆
+        </div>
+      </div>
+      
+    <div class="waveWrapper waveAnimation">
+        <div class="waveWrapperInner bgTop">
+            <div class="wave waveTop" style="background-image: url('img/wave-top.png')"></div>
+        </div>
+        <div class="waveWrapperInner bgMiddle">
+            <div class="wave waveMiddle" style="background-image: url('img/wave-mid.png')"></div>
+        </div>
+        <div class="waveWrapperInner bgBottom">
+            <div class="wave waveBottom" style="background-image: url('img/wave-bot.png')"></div>
+        </div>
+    </div>
+
+    <section class="hero is-medium animate__animated animate__backInUp" id="page">
+        <div class="hero-body animate__animated " id="searching">
+            <div class="columns">
+                <div class="column is-6 is-offset-1">
+                    <h1 class="title is-1" id="title">Jouw vraag, onze <span class="is-blue">taak</span></h1>
+                    <h1 class="subtitle is-6" id="subtitle">Wil je de tofste en misschien de leukste plaat ooit horen op
+                        evenementen van het jongeren parlement?</h1>
+                    <div class="column is-offset-0 is-7 has-text-centered animate__animated animate__fadeInUp"
+                        id="columns">
+                        <div class="field animate__animated animate__fadeInUp">
+                            <input id="name" class="input" type="text" placeholder="Jouw naam">
+                        </div>
+                        <div class="field animate__animated animate__fadeInUp">
+                            <input id="query" class="input" type="text" placeholder="Wat muziek stukje wil je zoeken?">
+                        </div>
+                        <div class="control" id="box">
+                            <textarea id="query-desc" class="textarea"
+                                placeholder="Waarom zou je dit liedje willen kiezen?"></textarea>
+                        </div>
+                        <br><br>
+
+                        <a id="search" class="button button-special is-rounded animate__animated animate__fadeInUp">
+                            <span class="icon has-text-discord"><i class="fad fa-sign-in-alt"></i></span>
+                            <span>Opzoeken</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-body animate__animated animate__fadeOutDownBig" id="results">
+            <div class="columns">
+                <div class="column is-6 is-offset-0">
+                    <a id="backsearching" class="button button-special is-rounded animate__animated animate__fadeInUp">
+                        <span class="icon has-text-discord"><i class="fad fa-sign-in-alt"></i></span>
+                        <span>Terug naar aanvragen</span>
+                    </a>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-6 ">
+                    <h1 class="title is-2" id="title">Wat wij vonden</h1>
+                    <h1 class="subtitle is-7" id="subtitle">Hier kan je zoeken naar je favoriete duintje van de eeuw.
+                        Selecteer de audio dat je bedoelt en ga verder met de aanvraag</h1>
+                </div>
+            </div>
+            <div class="columns is-multiline" id="list">
+
+            </div>
+        </div>
+
+        <div class="hero-body animate__animated animate__fadeOutDownBig" id="request">
+            <div class="columns" id="is-request">
+            </div>
+        </div>
+
+        <div class="hero-body animate__animated animate__fadeOutDownBig" id="requested">
+        </div>
+    </section>
+    <div class="loading-overlay is-active" id="loader">
+        <div class="loading-background"></div>
+        <div class="loading-icon"></div>
+    </div>
+
+</body>
+
+</html>
+
+
+<script src="/js/public/splash.js"></script>
+<script src="/js/modules/font.js"></script>

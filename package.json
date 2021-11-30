@@ -1,0 +1,30 @@
+{
+  "name": "oop",
+  "version": "0.1.0",
+  "dependencies": {
+    "axios": "^0.21.4",
+    "body-parser": "^1.19.0",
+    "bulma-extensions": "^6.2.7",
+    "bulma-pricingtable": "^2.1.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "fcc-express-background": "0.0.2",
+    "firebase-admin": "^10.0.0",
+    "passport": "^0.4.1",
+    "passport-discord": "^0.1.4",
+    "querystring": "^0.2.1",
+    "request": "^2.88.2",
+    "smooth-scrollbar": "^8.6.3",
+    "spotifier": "^0.4.0"
+  },
+  "main": "Server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
